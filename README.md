@@ -1,4 +1,4 @@
-# University-Programming-1-Introduction
+# University-Technical_Programming
 
 ## Welcome
 Welcome to this repository featuring the work I did in the university module Introduction to Technical Programming. This course is about C programming and includes the basics.
