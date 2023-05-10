@@ -20,10 +20,10 @@ int main() {
     multiplication = first * second;
     if (second != 0) {
         division = first / second;
+        modulo = first % second;
     } else {
-        printf("\n\nError: Dividing by 0 is not allowed. Output will be 0.\n\n");
+        printf("\nError: Dividing by 0 is not allowed. Output will be 0 for devision and modulo.\n\n");
     }
-    modulo = first % second;
 
     // output of calculation
     printf("The results are:\n+ = %i\n- = %i\n* = %i\n/ = %f\nmod = %i", addition, subtraction, multiplication, division, modulo);
