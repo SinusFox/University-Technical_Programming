@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 int main() {
     // variables
@@ -12,6 +13,12 @@ int main() {
     scanf("%lf", &amount);
     printf("\n1 EUR\n2 USD\n3 JPY\n\nPlease type in the target currency: ");
     scanf("%i", &targetCurrency);
+
+    // check for valid input
+    if (currentCurrency < 1 || currentCurrency > 4 || targetCurrency < 1 || targetCurrency > 4) {
+        printf("Invalid currencies.");
+        return 1;
+    }
 
     // calculating
     if (currentCurrency != targetCurrency) {
@@ -38,6 +45,9 @@ int main() {
             break;
         }
     }
+
+    // rounding fun
+    amount = round((amount*100))/100;
 
     // output
     printf("Amount in target currency is: %lf", amount);
