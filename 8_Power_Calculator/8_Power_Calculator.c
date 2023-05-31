@@ -10,7 +10,7 @@ void main() {
     scanf("%i", &power);
 
     // calculate
-    Calculate(&base, &power);
+    base = Calculate(base, power);
 
     // output
     printf("\nThe number is: %i.", base);
@@ -18,15 +18,13 @@ void main() {
     return 0;
 }
 
-void Calculate(unsigned long* base, unsigned long* power) {
-    unsigned long baseOriginal = *base;
-    if (*power == 0) {                           // power zero
-        *base = 1;
-        return;
-    }
-    if (*power > 0) {                           // power positive
-        for (unsigned int i = 1; i < *power; i++) {
-            *base *= baseOriginal;
+unsigned long Calculate(unsigned long base, unsigned long power) {
+    unsigned long baseOriginal = base;
+    if (power == 0) return 1;                   // power zero
+    if (power > 0) {                            // power positive
+        for (unsigned int i = 1; i < power; i++) {
+            base *= baseOriginal;
         }
     }
+    return base;
 }
